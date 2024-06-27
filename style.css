@@ -1,0 +1,405 @@
+/* A * jel az úgynevezett univerzális kijelölő, amit ebbe a definícióba írsz, minden elemre érvényes lesz.
+   Ezt a definíciót ezentúl minden stíluslapod elejére írd be! */
+* {
+	margin: 0; /* A margin jellemző külső margót állít be egy elemnek. Itt minden elem margóját lenullázzuk. */
+	padding: 0; /* A padding jellemző belső térközt állít be egy elemnek. Ezt is lenullázzuk, hogy ne a böngésző alapértelmezett értéke  legyen, hanem amit beállítunk. */
+	box-sizing: border-box; 
+}
+/* A FEJLÉC STÍLUSDEFINÍCIÓI */
+header {
+	text-align: center;
+	padding-top: 30px; 
+	padding-bottom: 30px;
+	background-image: url("../img/fekete_header.jpg");
+	background-size: cover;
+	background-position: left center;
+}
+
+/* A FŐ TARTALMI RÉSZ STÍLUSDEFINÍCIÓI: minden oldalon megtalálható elemek*/
+
+main {
+	border-right: 1px solid #C4BBAC;
+	width: 80%; /* A main elem a kijelző teljes szélességéből 80%-ot fog elfoglalni. */
+	float: left;
+}
+
+#sajto_main {
+	border: none;
+}
+
+body {
+	background-color: #14191F;
+	color: #668E96;
+	font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+	font-size: 30px;
+	padding-bottom: 30px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 28px;
+	padding: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+	color: #668E96;
+	font-size: 24px;
+	padding: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+/* A MENÜ STÍLUSDEFINÍCIÓI */
+nav {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0px;
+	background-color: #668E96;
+	height: 60px;
+	line-height: 60px; /* A sormagasság egyenlő a nav elem magasságával, így a tartalom függőlegesen középre kerül. Ez egy hasznos trükk! */
+	text-align: center;
+}
+
+.navlista {
+	position: relative;
+	display: inline-block;
+}
+
+.navlista:hover {
+    background-color: #15C9ED;
+	transition: 0.5s ease-in; /* A hover tulajdonság fél másodperc alatt valósul meg. */
+}
+
+.menu-link {
+	color: #ffffff;
+	font-size: 26px;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none; 
+	padding-left: 15px;
+	padding-right: 15px;
+	letter-spacing: 1px; /* A betűk közötti távolságot állítja be. */
+}
+
+.menu-link:hover {
+	color: #3A5054;
+	text-decoration: none;
+}
+#aktivmenu {
+	background-color: #36A4BA;
+}
+
+.dropdown-menu {
+    position: absolute; /* Gondoskodik az elem pontos elhelyzéséről, és hogy a többi tartalom felett jelenjen meg. */
+    left: 0; /* A főmenüpont bal széléhez igazítjuk az almenüt. */
+    z-index: 1; /* A biztonság kedvéért állítjuk be, nehogy egy másik pozicionált elem eltakarja. */
+    display: none;  /*A legördülő menü így rejtve marad. */
+    min-width: 140px; /* A document flow-ból kikerülő elemnek meg kell adni a szélességét. */
+    box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.2);
+	background-color: #7296B8;
+	padding: 5px;
+}
+.dropdown-menu-link:hover {
+	color: #3A5054;
+	text-decoration: none;
+}
+
+ul li:hover > .dropdown-menu {
+    display: block; /* Ha olyan menüpont főlé visszük az egérkurzort, aminek van almenüje (dropdown-menu), akkor az megjelenik. */
+}
+
+.dropdown-menu li {
+    background-color: #7296B8;
+    display: block; /* Az almenüpontok töltsék ki az almenü szélességét. */
+	text-align: left;
+}
+
+
+article {
+	padding: 20px;
+	text-align: left;
+}
+
+section {
+	border: 1px dashed #cacbce;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+aside {
+	width: 20%;	/* Az aside elem a kijelző teljes szélességéből 20%-ot fog elfoglalni. */
+	padding: 20px;
+	font-family: 'Libre Baskerville', serif;
+	float: right;
+	border-top: 1px solid #C4BBAC;
+}
+
+img {
+	max-width: 100%; /* Minden kép szélessége maximum annyi lehet, amennyi az őt tartalmazó elem szélessége. */
+}
+
+p { 
+	padding: 20px;
+	font-size: 22px;
+}
+
+a {
+	color: #f0e1c7;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #CF7A2B;
+}
+
+ul {
+	padding-left: 40px;
+	padding-bottom: 40px;
+	font-family: Georgia, Times, 'Times New Roman', serif;
+    color: #80A6A6;
+    font-size: 22px;
+	list-style-type: circle;
+}
+
+
+div {
+	margin: 0 auto 20px auto; /* Középre igazítja a div elemet. */
+	max-width: 1000px; 
+}
+
+#logo {
+	width: 200px;
+	padding-bottom: 30px;
+}
+
+
+.right-floated {
+	float: right;
+	margin-left: 15px;
+}
+
+.kiemelt_listapont {
+	font-family: 'Croissant One', cursive;
+	color: #36A4BA;
+	font-size: 26px;	
+}
+
+ul li ul li {
+	list-style-image: url('../img/book1.png')
+}
+
+.clearfix {
+	clear: both;
+}
+/*kezdőoldal*/
+
+#name_highlight {
+	font-family: 'Croissant One', cursive;
+	color: #fcba03;
+}
+#bemutatkozokep {
+	float: left;
+	margin-right: 20px;
+}
+#div_fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 0px;
+}
+
+#sutik {
+	font-size: 10px;
+	padding: 5px;
+}
+
+#form_cookies {
+	width: 600px;
+	font-size: 13px;
+	padding: 5px;
+	margin: 5px;
+}
+
+/*vélemények oldal*/
+#rolam_main {
+	border: none;
+	width: 100%
+}
+.card {
+	width: 33.33%;
+    padding: 10px;
+    text-align: center;
+}
+.card > h3 {
+	margin: 0.5rem 0;
+	color: #15C9ED;
+	font-size: 26px;
+}
+.card > img {
+	width: 200px;
+	border-radius: 50%;
+}
+.left-floated-rolam {
+	float: left;
+}
+
+/* a SUTIK RENDBEN GOMBJA */
+.rendben-gomb {
+	border: 1px solid;
+	margin: 5px;
+	padding: 0.5rem;
+	font-size: 16px;
+	border-radius: 0.5rem;
+}
+
+/*szolgáltatások*/
+
+#portrefotozas {
+	height: 650px;
+}
+
+#csaladifotozas {
+	height: 650px;
+}
+
+#wedding {
+	height: 650px;
+}
+
+#newborn {
+	height: 650px;
+}
+#esemeny {
+	height: 650px;
+}
+
+#reklam {
+	height: 650px;
+}
+
+#arrow {
+	font-size: 50px;
+}
+
+#akcio {
+	border-radius: 15%;
+}
+
+/*árak oldal*/
+
+.csomagok {
+	text-decoration-line: underline;
+	color: white;
+}
+
+
+/* kapcsolat oldal */
+.left-floated {
+	float: left;
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+address {
+	padding: 10px;
+	font-size: 22px;
+}
+
+/* FORM STÍLUSDEFINÍCIÓI */
+#kapcsolat {
+	background-image: url("../img/fekete_header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+input[type=text], textarea, select {
+    display: block;
+	width: 80%;
+    padding: 0.3rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+form {
+	width: 75%;
+    border: 1px solid #969a9e;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	background-color: rgb(209, 237, 240, 0.1);
+	font-size: 22px;
+	font-family: 'Poppins', sans-serif;
+	color: #dae1e8;
+}
+
+.required:after{
+	content: "*";
+	color: orange;
+}
+
+.kuldes-gomb {
+	color: #23a591;
+	background: transparent;
+	border: 4px solid #23a591;
+	transition: all 0.3s ease 0s;
+	font-size: 22px;
+	margin: 1rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 1.2rem;
+	border-radius: 0.25rem;
+}
+.kuldes-gomb:hover {
+	color: #fcba03;
+	border-radius: 50px !important;
+	border-color: #fcba03;
+	transition: all 0.3s ease 0s;
+}
+
+/*galéria oldal*/
+
+#galeria_main {
+	width: 100%;
+}
+
+.portfolio {
+	width: 25%;
+    height: auto;
+    float: left;
+    padding: 15px;
+	text-align: center;
+}
+
+.portfolio:hover {
+	opacity: 0.5;
+}
+
+/* A LÁBLÉC STÍLUSDEFINÍCIÓI */
+footer {
+	clear: both;
+	color: #6b6b6b;
+    text-align: center;
+	border-top: 1px solid #cacbce;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	background-image: url("../img/fekete_header.jpg");
+	background-size: cover;
+	background-position: left center;
+	margin-top: 30px;
+}
+
+
