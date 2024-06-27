@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kapcsolat-Félix Fotó</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- FEJLÉC -->
+    <header>
+		<a href="index.html"><img src="img/felix-logo_feher.png" id="logo" alt="Felix Fotó"></a>
+    </header>
+	<!-- NAVIGÁCIÓ -->
+    <nav>
+		<ul>
+			<li id="aktivmenu" class="navlista">
+				<a href="index.html" class="menu-link">Főoldal</a>
+				<ul class="dropdown-menu">
+                    <li><a class="dropdown-menu-link" href="sajto.html">Sajtómegjelenések</a></li>
+                    <li><a class="dropdown-menu-link" href="rolam.html">Rólam írtátok</a></li>
+				</ul>
+			</li>
+			<li class="navlista"><a href="szolgaltatasok.html" class="menu-link">Szolgáltatások</a></li>
+			<li class="navlista"><a href="arak.html" class="menu-link">Árak</a></li>
+			<li class="navlista"><a href="kapcsolat.html" class="menu-link">Kapcsolat</a></li>
+			<li class="navlista"><a href="galeria.html" class="menu-link">Galéria</a></li>
+		</ul>
+    </nav>
+    
+    <!-- A WEBOLDAL FŐ TARTALMI RÉSZE -->
+    <main>
+        <article>
+			<h2>KAPCSOLAT</h2>
+           <section>
+				<h3>Elérhetőségeim:</h3>
+                <address>
+                    Cím: Budapest, Gólya u. 13, 1203<br>
+                    Tel: <a href="tel:+36301234567">+36 30 1234567</a><br>
+                    Email: <a href="mailto:felixfoto@gmail.com">felixfoto@gmail.com</a>
+                </address>
+           </section>
+           <section>
+				<h3>Megközelítés:</h3>
+				<p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.483380506509!2d19.102393376383674!3d47.441516171175174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c2b252a5f5ed%3A0x48d9ace72747a662!2sBudapest%2C%20G%C3%B3lya%20u.%2013%2C%201203!5e0!3m2!1shu!2shu!4v1692912102265!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</p>
+           </section>
+		   <section>
+			<h3>Studiónk:</h3><br>
+				<img src="img/studio.jpg" height="400" alt="studio1" class="left-floated"><img src="img/studio2.jpg" height="400" alt="studio2" class="left-floated">
+				<div class="clearfix"></div>
+			</section>
+			<section id="kapcsolat">
+				<h3>Kapcsolat:</h3>
+				<form>
+					<div>
+						<label for="name-id">Név:</label> 
+						<input type="text" name="name" id="name-id"><br><br>
+					</div>
+					<div>
+						<label for="email-id">E-mail:</label>
+						<input type="text" name="email" id="email-id" placeholder="xyz@mail.hu" required><br><br>
+					</div>
+					<div>
+						<label for="hallott" > Hol hallottál rólam?</label> 
+						<select name="hallott" id="hallott">
+							<option selected value="">--válassz!--</option>
+							<option value="internet">Internetes keresés során</option>
+							<option value="facebook">Facebookon</option>
+							<option value="instagram">Instagramon</option>
+							<option value="ismerős">Ismerős ajánlott téged</option>
+							<option value="hirdetés">Hirdetésben</option>
+							<option value="egyéb">Egyéb</option>
+						</select><br><br>
+					</div>
+					<div>
+						<label for="uzenet">Ide írhatod az üzeneted:</label> 
+						<textarea name="uzenet" id="uzenet" cols="50" rows="10" required></textarea><br><br>
+					</div>
+					<div>
+						<input type="checkbox" name="adatvedelem" value="" required>
+						<label for="adatvedelem" class="required">Elfogadom az <a href="adatvedelem.html" class="privacy">adatvédelmi nyilatkozatban</a> foglaltakat.</label>
+					</div>
+					<div>
+					<input type="submit" value="Küldés" class="kuldes-gomb">
+					</div>
+				</form>
+			</section>
+        </article>
+    </main>
+    
+    <!-- OLDALSÁV -->
+    <aside>
+		<table>
+			<caption><h3>Elérhető időpontjaim:</h3></caption>
+			<thead>
+				<tr>
+					<th>Hétfő</th>
+					<th>Kedd</th>
+					<th>Szerda</th>
+					<th>Csütörtök</th>
+					<th>Péntek</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>14-18h</td>
+					<td>10-14h</td>
+					<td>16-18h</td>
+					<td>14-17h</td>
+					<td> - </td>
+				</tr>
+			</tbody>
+		</table>
+		<p><i>Ha más időpontot szeretnél, kérlek keress minket telefonon.</i></p>
+    </aside>
+
+    <!-- LÁBLÉC -->
+    <footer>
+		<a href="https://facebook.com"><img src="img/facebook_gold.png" class="icon" alt="Facebook"></a>
+		<a href="https://instagram.com"><img src="img/instagram_gold.png" class="icon" alt="Instagram"></a>
+    </footer>
+</body>
+
+</html>
